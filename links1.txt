@@ -1,0 +1,2 @@
+netlify: https://bespoke-granita-9c0384.netlify.app/
+amplify: https://main.d3ckor4ednm6gt.amplifyapp.com/
