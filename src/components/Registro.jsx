@@ -215,9 +215,8 @@ const Registro = () => {
                 listaEstudiantes.map((item)=>(
                 <li className="list-group-item" key={item.id}>
                 <span className='lead'>
-                    <picture>
-                    <img src="https://picsum.photos/200/300" alt="Photo" />
-                    </picture>
+                    <img src="https://picsum.photos/200/300" alt="" />
+
                 <br />
                 <label >Nombre:</label> {item.nombreEstudiante} 
                 <br />
@@ -231,7 +230,7 @@ const Registro = () => {
                 <br />
                 <label >Ciudad:</label> {item.ciudadEstudiante}
                 <br />
-                <label >Carrera </label> {item.programaEstudiante}</span>
+                <label >Carrera Universitaria</label> {item.programaEstudiante}</span>
                 <button className='btn btn-outline-danger btn-sm float-end mx-2'onClick={()=>eliminar(item.id)}>Eliminar</button>
                 <button className='btn btn-outline-warning btn-sm float-end' onClick={()=>editar(item)}>Editar</button>
                 </li>
@@ -253,13 +252,13 @@ const Registro = () => {
                 <label >Apellidos</label>
                 <input className='form-control mb-2'type="text" placeholder='Ingrese su apellido'onChange={(e)=>setApellido(e.target.value)}value={apellido} required/>
                 <label >Correo Electrónico</label>
-                <input className='form-control mb-2' type="email" placeholder='Ingrese su correo' onChange={(e)=>setCorreo(e.target.value)}value={correo}required/>
+                <input className='form-control mb-2' type="email" placeholder='Ingrese su correo' onChange={(e)=>setCorreo(e.target.value)}value={correo} required/>
                 <label for="inputAddress">Dirección</label>
-                <input className='form-control mb-2' id="inputAdress"type="text"  placeholder='Ingrese su dirección' onChange={(e)=>setDireccion(e.target.value)}value={direccion}required/>
+                <input className='form-control mb-2' id="inputAdress"type="text"  placeholder='Ingrese su dirección' onChange={(e)=>setDireccion(e.target.value)}value={direccion} required/>
                 <label >Teléfono</label>
-                <input className='form-control mb-2' type="phone" placeholder='Ingrese su teléfono' onChange={(e)=>setTelefono(e.target.value)}value={telefono}required/>
+                <input className='form-control mb-2' type="phone" placeholder='Ingrese su teléfono' onChange={(e)=>setTelefono(e.target.value)}value={telefono} required/>
                 <label >Ciudad</label>
-                <input className='form-control mb-2' type="text" placeholder='Ingrese su ciudad' onChange={(e)=>setCiudad(e.target.value)}value={ciudad}required/>
+                <input className='form-control mb-2' type="text" placeholder='Ingrese su ciudad' onChange={(e)=>setCiudad(e.target.value)}value={ciudad} required/>
                 <label >Carrera Universitaria</label>
                 <input className='form-control mb-2' type="text" placeholder='Ingrese su programa' onChange={(e)=>setPrograma(e.target.value)}value={programa}required/>
                 <br />
