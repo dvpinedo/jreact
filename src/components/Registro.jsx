@@ -40,31 +40,31 @@ const Registro = () => {
         e.preventDefault()
 
         if(!nombre.trim()){
-            alert("Digite el nombre")
+            alert("Por favor ingrese el nombre")
             return
         }
         if(!apellido.trim()){
-            alert("Digite el apellido")
+            alert("Por favor ingrese el apellido")
             return
         }
         if(!correo.trim()){
-            alert("Digite el correo")
+            alert("Por favor ingrese el correo")
             return
         }
         if(!direccion.trim()){
-            alert("Digite la direccion")
+            alert("Por favor ingrese la dirección")
             return
         }
         if(!telefono.trim()){
-            alert("Digite el telefono")
+            alert("Por favor ingrese el teléfono")
             return
         }
         if(!ciudad.trim()){
-            alert("Digite la ciudad")
+            alert("Por favor ingrese la ciudad")
             return
         }
         if(!programa.trim()){
-            alert("Digite el programa")
+            alert("Por favor el programa")
             return
         }
 
@@ -118,31 +118,31 @@ const Registro = () => {
 
         
         if(!nombre.trim()){
-            alert("Digite el nombre")
+            alert("Por favor ingrese el nombre")
             return
         }
         if(!apellido.trim()){
-            alert("Digite el apellido")
+            alert("Por favor ingrese el apellido")
             return
         }
         if(!correo.trim()){
-            alert("Digite el correo")
+            alert("Por favor ingrese el correo")
             return
         }
         if(!direccion.trim()){
-            alert("Digite la direccion")
+            alert("Por favor ingrese la dirección")
             return
         }
         if(!telefono.trim()){
-            alert("Digite el telefono")
+            alert("Por favor ingrese el teléfono")
             return
         }
         if(!ciudad.trim()){
-            alert("Digite la ciudad")
+            alert("Por favor ingrese la ciudad")
             return
         }
         if(!programa.trim()){
-            alert("Digite el programa")
+            alert("Por favor el programa")
             return
         }
 
@@ -220,7 +220,7 @@ const Registro = () => {
                 <br />
                 <label >Nombre:</label> {item.nombreEstudiante} 
                 <br />
-                <label >Apellidos:</label> {item.apellidoEstudiante}
+                <label >Apellido:</label> {item.apellidoEstudiante}
                 <br />
                 <label >Correo Electrónico:</label> {item.correoEstudiante}
                 <br />
@@ -247,20 +247,20 @@ const Registro = () => {
                 <br />
                 <form onSubmit={edicion? editarEstudiantes : guardarEstudiantes}>
 
-                <label >Nombres</label>
-                <input className='form-control mb-2' type="text" placeholder='Ingrese su nombre'onChange={(e)=>setNombre(e.target.value)}value={nombre} required/>
-                <label >Apellidos</label>
-                <input className='form-control mb-2'type="text" placeholder='Ingrese su apellido'onChange={(e)=>setApellido(e.target.value)}value={apellido} required/>
+                <label >Nombre</label>
+                <input className='form-control mb-2' type="text" placeholder='Ingrese su nombre'onChange={(e)=>setNombre(e.target.value)}value={nombre} />
+                <label >Apellido</label>
+                <input className='form-control mb-2'type="text" placeholder='Ingrese su apellido'onChange={(e)=>setApellido(e.target.value)}value={apellido} />
                 <label >Correo Electrónico</label>
-                <input className='form-control mb-2' type="email" placeholder='Ingrese su correo' onChange={(e)=>setCorreo(e.target.value)}value={correo} required/>
+                <input className='form-control mb-2' type="email" placeholder='Ingrese su correo' onChange={(e)=>setCorreo(e.target.value)}value={correo} />
                 <label for="inputAddress">Dirección</label>
-                <input className='form-control mb-2' id="inputAdress"type="text"  placeholder='Ingrese su dirección' onChange={(e)=>setDireccion(e.target.value)}value={direccion} required/>
+                <input className='form-control mb-2' id="inputAdress"type="text"  placeholder='Ingrese su dirección' onChange={(e)=>setDireccion(e.target.value)}value={direccion} />
                 <label >Teléfono</label>
-                <input className='form-control mb-2' type="phone" placeholder='Ingrese su teléfono' onChange={(e)=>setTelefono(e.target.value)}value={telefono} required/>
+                <input className='form-control mb-2' type="phone" placeholder='Ingrese su teléfono' onChange={(e)=>setTelefono(e.target.value)}value={telefono} />
                 <label >Ciudad</label>
-                <input className='form-control mb-2' type="text" placeholder='Ingrese su ciudad' onChange={(e)=>setCiudad(e.target.value)}value={ciudad} required/>
+                <input className='form-control mb-2' type="text" placeholder='Ingrese su ciudad' onChange={(e)=>setCiudad(e.target.value)}value={ciudad} />
                 <label >Carrera Universitaria</label>
-                <input className='form-control mb-2' type="text" placeholder='Ingrese su programa' onChange={(e)=>setPrograma(e.target.value)}value={programa}required/>
+                <input className='form-control mb-2' type="text" placeholder='Ingrese su programa' onChange={(e)=>setPrograma(e.target.value)}value={programa} />
                 <br />
                 {
                     edicion ? (
