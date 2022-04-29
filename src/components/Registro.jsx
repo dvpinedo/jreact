@@ -146,7 +146,7 @@ const Registro = () => {
             return
         }
 
-        try{ console.log(id)
+        try{ console.log(id,"edicion")
             const db = firebase.firestore()
             await db.collection('university').doc(id).update({
             nombreEstudiante: nombre,
