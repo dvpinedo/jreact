@@ -219,19 +219,19 @@ const Registro = () => {
                     <img src="https://picsum.photos/200/300" alt="Photo" />
                     </picture>
                 <br />
-                Nombres: {item.nombreEstudiante} 
+                <label >Nombre:</label> {item.nombreEstudiante} 
                 <br />
-                Apellidos: {item.apellidoEstudiante}
+                <label >Apellidos:</label> {item.apellidoEstudiante}
                 <br />
-                Correo electronico: {item.correoEstudiante}
+                <label >Correo Electrónico:</label> {item.correoEstudiante}
                 <br />
-                Dirección: {item.direccionEstudiante}
+                <label >Dirección:</label> {item.direccionEstudiante}
                 <br />
-                Telefono: {item.telefonoEstudiante}
+                <label >Teléfono:</label> {item.telefonoEstudiante}
                 <br />
-                Ciudad: {item.ciudadEstudiante}
+                <label >Ciudad:</label> {item.ciudadEstudiante}
                 <br />
-                Carrera universitaria: {item.programaEstudiante}</span>
+                <label >Carrera Universitaria:</label> {item.programaEstudiante}</span>
                 <button className='btn btn-outline-danger btn-sm float-end mx-2'onClick={()=>eliminar(item.id)}>Eliminar</button>
                 <button className='btn btn-outline-warning btn-sm float-end' onClick={()=>editar(item)}>Editar</button>
                 </li>
