@@ -145,6 +145,7 @@ const Registro = () => {
             alert("Digite el programa")
             return
         }
+        
 
         try{ console.log(id,"edicion")
             const db = firebase.firestore()
