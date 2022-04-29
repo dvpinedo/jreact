@@ -231,7 +231,7 @@ const Registro = () => {
                 <br />
                 <label >Ciudad:</label> {item.ciudadEstudiante}
                 <br />
-                <label >Carrera Universitaria:</label> {item.programaEstudiante}</span>
+                <label >Carrera </label> {item.programaEstudiante}</span>
                 <button className='btn btn-outline-danger btn-sm float-end mx-2'onClick={()=>eliminar(item.id)}>Eliminar</button>
                 <button className='btn btn-outline-warning btn-sm float-end' onClick={()=>editar(item)}>Editar</button>
                 </li>
