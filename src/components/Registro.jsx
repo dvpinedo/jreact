@@ -10,6 +10,8 @@ const Registro = () => {
     const [ciudad, setCiudad]= React.useState('')
     const [programa, setPrograma]=React.useState('')
     const [id, setId]=React.useState('')
+    const [img,setImg]=React.useState('')
+    console.log('IMAGENNN', img)
     
 
     const [edicion, setEdicion]=React.useState(false)
@@ -39,6 +41,10 @@ const Registro = () => {
     const guardarEstudiantes = async (e)=>{
         e.preventDefault()
 
+        const numeroAleatorio = (limite) => Math.floor(Math.random() * limite);
+        const idGuardar = numeroAleatorio(31);
+        const url='https://picsum.photos/id/'+idGuardar+'/200/300'
+        
         if(!nombre.trim()){
             alert("Por favor ingrese el nombre")
             return
@@ -71,6 +77,7 @@ const Registro = () => {
         try{
             const db = firebase.firestore();
             const student = {
+            imagenEstudiante: url,
             nombreEstudiante: nombre,
             apellidoEstudiante: apellido,
             correoEstudiante: correo,
@@ -82,7 +89,7 @@ const Registro = () => {
           await db.collection('university').add(student)
             setListaEstudiantes([
             ...listaEstudiantes,
-            {id:nanoid(),nombreEstudiante: nombre, apellidoEstudiante: apellido, correoEstudiante: correo, direccionEstudiante: direccion, telefonoEstudiante: telefono, ciudadEstudiante: ciudad, programaEstudiante: programa}
+            {id:nanoid(),imagenEstudiante: url,nombreEstudiante: nombre, apellidoEstudiante: apellido, correoEstudiante: correo, direccionEstudiante: direccion, telefonoEstudiante: telefono, ciudadEstudiante: ciudad, programaEstudiante: programa}
         ])
         console.log(listaEstudiantes)
         e.target.reset()
@@ -215,7 +222,8 @@ const Registro = () => {
                 listaEstudiantes.map((item)=>(
                 <li className="list-group-item" key={item.id}>
                 <span className='lead'>
-                    <img src="https://picsum.photos/200/300" alt="" />
+                
+                <img src={item.imagenEstudiante} alt="" />
 
                 <br />
                 <label >Nombre:</label> {item.nombreEstudiante} 
@@ -262,6 +270,7 @@ const Registro = () => {
                 <label >Carrera Universitaria</label>
                 <input className='form-control mb-2' type="text" placeholder='Ingrese su programa' onChange={(e)=>setPrograma(e.target.value)}value={programa} />
                 <br />
+                
                 {
                     edicion ? (
                     <>
