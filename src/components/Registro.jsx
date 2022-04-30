@@ -10,8 +10,6 @@ const Registro = () => {
     const [ciudad, setCiudad]= React.useState('')
     const [programa, setPrograma]=React.useState('')
     const [id, setId]=React.useState('')
-    const [img,setImg]=React.useState('')
-    console.log('IMAGENNN', img)
     
 
     const [edicion, setEdicion]=React.useState(false)
